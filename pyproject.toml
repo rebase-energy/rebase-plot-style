@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rebase-plot-style"
+version = "0.1.0"
+description = "Matplotlib style and helper functions for nice-looking plots"
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "matplotlib>=3.5"
+    "cycler",
+    "ipython"
+]
+
+[project.urls]
+Homepage = "https://github.com/rebase-energy/rebase-plot-style"
+
+[tool.setuptools]
+packages = ["rebase_plot_style"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+mycompany_style = ["*.mplstyle"]

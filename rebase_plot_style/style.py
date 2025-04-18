@@ -19,7 +19,7 @@ def set_plot_style():
     plt.rcParams["axes.prop_cycle"] = cycler(color=BRAND_COLORS)
 
 @register_line_magic
-def rebase_style(line):
+def rebase_plot_style(line):
     """
     IPython magic: %rebase_style
     Applies Rebase plot style (ignores any arguments).

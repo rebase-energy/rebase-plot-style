@@ -8,9 +8,9 @@ font.family: sans-serif
 font.sans-serif: DejaVu Sans
 axes.spines.top: False
 axes.spines.right: False
-axes.edgecolor: '#444444'
+axes.edgecolor: #444444
 axes.grid: True
-grid.color: '#dddddd'
+grid.color: #dddddd
 grid.linestyle: --
 grid.alpha: 0.6
-xtick.color: '#888888'
+xtick.color: #888888

@@ -15,7 +15,3 @@ dependencies = [
 
 [tool.setuptools]
 packages = ["rebase_plot_style"]
-include-package-data = true
-
-[tool.setuptools.package-data]
-rebase_plot_style = ["*.mplstyle"]

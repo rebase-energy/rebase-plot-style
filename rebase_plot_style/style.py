@@ -1,28 +1,38 @@
 import matplotlib.pyplot as plt
-from matplotlib import style as mplstyle
 from cycler import cycler
-import importlib.resources
 from IPython.core.magic import register_line_magic
 
-# Rebase brand color cycle
+# Rebase brand colors
 BRAND_COLORS = ["#2cbc99", "#457cf6"]
 
 def set_plot_style():
     """
-    Apply Rebase matplotlib style and color cycle.
+    Apply full Rebase matplotlib style in Python.
     """
-    # Load .mplstyle from package resources
-    with importlib.resources.path("rebase_plot_style", "rebase.mplstyle") as path:
-        mplstyle.use(str(path))
-
-    # Set global color cycle
-    plt.rcParams["axes.prop_cycle"] = cycler(color=BRAND_COLORS)
+    plt.rcParams.update({
+        "figure.figsize": (10, 6),
+        "axes.titlesize": 18,
+        "axes.labelsize": 16,
+        "xtick.labelsize": 14,
+        "ytick.labelsize": 14,
+        "legend.fontsize": 14,
+        "font.family": "sans-serif",
+        "font.sans-serif": ["DejaVu Sans"],
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "axes.edgecolor": "#444444",
+        "axes.grid": True,
+        "grid.color": "#dddddd",
+        "grid.linestyle": "--",
+        "grid.alpha": 0.6,
+        "xtick.color": "#888888",
+        "axes.prop_cycle": cycler(color=BRAND_COLORS),
+    })
 
 @register_line_magic
-def rebase_plot_style(line):
+def rebase_style(line):
     """
     IPython magic: %rebase_style
-    Applies Rebase plot style (ignores any arguments).
     """
     set_plot_style()
-    print("✅ Rebase style applied.")
+    print("✅ Rebase plot style applied.")

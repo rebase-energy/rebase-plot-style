@@ -25,12 +25,11 @@ def set_plot_style():
         "grid.color": "#dddddd",
         "grid.linestyle": "--",
         "grid.alpha": 0.6,
-        "xtick.color": "#888888",
         "axes.prop_cycle": cycler(color=BRAND_COLORS),
     })
 
 @register_line_magic
-def rebase_style(line):
+def rebase_plot_style(line):
     """
     IPython magic: %rebase_style
     """
